@@ -6,7 +6,7 @@
  * em uma lista.
  */
 
- #include <stdio.h>
+#include <stdio.h>
 
 /*
  *	Realiza uma busca linear por um inteiro x num array
