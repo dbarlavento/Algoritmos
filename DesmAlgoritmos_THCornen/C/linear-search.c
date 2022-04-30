@@ -8,23 +8,40 @@
 
  #include <stdio.h>
 
- int main() 
- {
- 	//Lista contendo os 10 primeiros números primos
-	int primos[10] = {1, 2, 3, 5, 7, 9, 11, 13, 17, 19};
+/*
+ *	Realiza uma busca linear por um inteiro x num array
+ *	lista: array de inteiros onde haverá a busca
+ * tamanho: comprimento do array
+ * x: inteiro a ser buscado
+ * Retorna a posição da última ocorrência de x no array ou
+ *	-1 se não encontrar x
+ */
+int linearSearch(int lista[], int tamanho, int x);
+
+int main() 
+{
+ 	//Lista contendo os 10 primeiros números
+	int primos[10] = {'0', '1', '2', '3', '4', '5',
+		'6', '7', '8', '9'};
 	int numPrimos = 10;
 	int num; //Número a ser buscado
-	int i; //indíce de busca
 
 	num = getchar();
 
 	if (num < '0' || num > '9')
 		printf("O valor digitado não é número\n");
 	else {
-		for (i = 0; i < 10; ++i) {
-			if(primos[i] == num)
-				printf("posição: %d\n", i);
-		}
+		printf("posição: %d\n", linearSearch(primos, 10, num));
 	}
+}//fim de main
 
- }//fim de main
+int linearSearch(int lista[], int tamanho, int x)
+{
+	int i, saida;
+	saida = -1;
+	for (i = 0; i < tamanho; ++i) {
+		if (lista[i] == x)
+			saida = i;
+	}
+	return saida;
+}//fim de linear-search
