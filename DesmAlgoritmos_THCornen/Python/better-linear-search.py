@@ -39,7 +39,12 @@ def geradorDePrimos(inicio, fim):
 		nc += 2
 	return primos
 
-#Início
-param = int(sys.argv[1])
-#Números primos entre 3 e 1000
-print(betterLinearSearch(geradorDePrimos(3, 1000), param))
+#Função principal
+def main():
+	param = int(sys.argv[1])
+	#Números primos entre 3 e 1000
+	print(betterLinearSearch(geradorDePrimos(3, 1000), param))
+	return 0
+
+Execução do programa
+main()
