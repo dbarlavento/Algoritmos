@@ -46,5 +46,5 @@ def main():
 	print(betterLinearSearch(geradorDePrimos(3, 1000), param))
 	return 0
 
-Execução do programa
+#Execução do programa
 main()
